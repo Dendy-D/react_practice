@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
-import Overview from './componentsDoc/r'
-import ShoppingBasket from './project1/ShoppingBasket'
-// import Form from './project2/Form'
-// import Table from './project2/Table'
+import Form from './project2/Form'
+import Table from './project2/Table'
 // import ShoppingBasket from './project1/ShoppingBasket'
 // import Calculator from './componentsDoc/Calculator'
 // import Button from './componentsDoc/Button'
@@ -20,9 +18,33 @@ import ShoppingBasket from './project1/ShoppingBasket'
 
 
 class App extends Component {
+  state = {
+    characters: []
+  }
+
+  removeCharacter = index => {
+    const { characters } = this.state
+
+    this.setState({
+      characters: characters.filter((elem, i) => {
+        return i !== index
+      })
+    })
+  }
+
+  handleSubmit = (character) => {
+    this.setState({
+      characters: [...this.state.characters, character]
+    })
+  }
+
   render() {
     return (
-      <ShoppingBasket/>
+      <div className='App.css container'>
+        <h1 className='h1 mt-3 mb-3 font-weight-bold'>The list of users</h1>
+        <Table characterData={this.state.characters} removeCharacter={this.removeCharacter} />
+        <Form handleSubmit={this.handleSubmit} />
+      </div>
     )
   }
 }
