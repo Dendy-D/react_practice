@@ -10,7 +10,7 @@ class ShoppingBasket extends Component {
   render() {
     return (
       <div className='container'>
-        <h1 className='mx-auto' style={{width: 350 + 'px'}}>Shopping Basket</h1>
+        <h1 className='mx-auto' style={{ width: 350 + 'px' }}>Shopping Basket</h1>
         <AddThing />
         
       </div>

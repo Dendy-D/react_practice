@@ -1,9 +1,7 @@
-.user_map {
-  border: 2px solid black;
-  /* width: 100px */
+span {
+  font-weight: bold;
+  margin-right: 8px;
 }
-.width {
-  width: 50px;
-  height: 100px;
-  white-space: normal;
+label {
+  font-weight: bold;
 }

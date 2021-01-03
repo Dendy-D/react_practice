@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 
 class ButtonForAdd extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {}
-  }
+  
 
 
 
@@ -33,3 +29,4 @@ export default ButtonForAdd
 //           placeholder={'Input price'}
 //           className={'form-control'}
 //           type={'text'}
+
